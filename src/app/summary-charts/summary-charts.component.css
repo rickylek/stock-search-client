@@ -1,0 +1,11 @@
+.custom-stock-charts {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+@media (max-width: 576px) {
+    .custom-stock-charts {
+        width: 100%;
+    }
+}

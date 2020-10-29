@@ -1,0 +1,48 @@
+
+<div class="row ml-0 mr-0">
+    <div class="col-xs-12 col-md-6">
+
+        
+        <div class="row ml-0 mr-0">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 stock-price-col">
+                <div class="stock-price-div">
+                    <ul class="stock-price-ul">
+                        <li>High Price:  {{stockPrice.high}}</li>
+                        <li>Low Price:   {{stockPrice.low}}</li>
+                        <li>Open Price : {{stockPrice.open}}</li>
+                        <li>Prev. Close: {{stockPrice.prevClose}}</li>
+                        <li>Volume     : {{stockPrice.volume}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 stock-price-col">
+                <div class="stock-price-div">
+                    <ul class="stock-price-ul">
+                        <li>Mid Price:  {{stockPrice.mid}}</li>
+                        <li>Ask Price:   {{stockPrice.askPrice}}</li>
+                        <li>Ask Size : {{stockPrice.askSize}}</li>
+                        <li>Bid Price: {{stockPrice.bidPrice}}</li>
+                        <li>Bid Size : {{stockPrice.bidSize}}</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="row ml-0 mr-0">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h1 class="text-center">Company's Description</h1>
+                <p>Start Date: {{ stock.startDate | date: 'yyyy-MM-dd' }}</p>
+                <p>{{ stock.description}}</p>
+            </div>
+        </div>
+        
+    </div>
+    <div class="col-xs-12 col-md-6">
+        <div class="charts">
+            <app-summary-charts [stockPrice]="stockPrice"></app-summary-charts>
+        </div>
+    </div>
+</div>
+

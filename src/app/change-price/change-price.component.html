@@ -1,0 +1,4 @@
+<div class="price-right">
+    <div class="last-price" [style.color]="getChangeColor()">{{stockPrice.last}}</div>
+    <div class="change" [style.color]="getChangeColor()"><i class="fa {{changeIcon}}" aria-hidden="true"></i> {{stockPrice.change}} ({{stockPrice.changePercentage}}%)</div>
+</div>

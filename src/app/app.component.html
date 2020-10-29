@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-purple">
+    <a class="navbar-brand" href="#">Stock Search</a>
+    <button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed"
+      data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link nav-link-outline">Search</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/watchlist" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link nav-link-outline">Watchlist</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/portfolio" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link nav-link-outline">Portfolio</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

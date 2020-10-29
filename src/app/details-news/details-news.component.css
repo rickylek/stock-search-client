@@ -1,0 +1,76 @@
+.news-card {
+  margin: 20px 0 0 0;
+  padding: 20px;
+  display: flex;
+  height: 150px;
+}
+
+.news-image {
+  width: 40%;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0;
+  margin-right: 20px;
+}
+
+.news-title {
+  width: 60%;
+  font-size: 20px;
+  line-height: normal;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0;
+}
+
+.close {
+  outline: none;
+}
+
+/** icons */
+.fa {
+  padding-right: 5px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+/* Facebook */
+.fa-facebook-square {
+  color: #3B5998;
+}
+
+/* Twitter */
+.fa-twitter {
+  color: #55ACEE;
+}
+
+/** icons */
+
+@media (max-width: 576px) {
+  .news-modal .modal-dialog {
+    width: 360px;
+  }
+
+  .news-card {
+    height: auto;
+  }
+
+  .news-image {
+    width: 100%;
+    margin: 0;
+  }
+
+  .news-title {
+    /* display: block; */
+    margin-top: 20px;
+    width: 100%;
+  }
+
+}

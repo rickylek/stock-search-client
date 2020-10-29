@@ -1,0 +1,36 @@
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <div class="news-details-header">
+            <h1 class="modal-title" id="news-publisher">{{selectedNews.source}}</h1>
+            <p class="news-publish-date">{{selectedNews.publishedAt}}</p>
+        </div>
+
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <h2 class="news-details-title">{{selectedNews.title}}</h2>
+      <p class="news-description">{{selectedNews.description}}</p>
+      <p>For more details click <a href="{{selectedNews.url}}" target="_blank" rel="noopener noreferrer">here</a></p>
+      <div class="border p-2 rounded">
+        <p>Share</p>
+        <a target="_blank" href="https://twitter.com/intent/tweet?text={{selectedNews.title}}&url={{selectedNews.url}}"><i class="fa fa-twitter" aria-hidden="true"> </i></a>
+        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{selectedNews.url}}&amp;src=sdkpreparse" data-size="large"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </ng-template>
+  
+  <div class="row">
+    <div class="col-xs-12 col-md-6" *ngFor="let news of stockNews">
+      <div class="row news-card border rounded bg-light" (click)="showNewsDetails(news, content)">
+        <div class="news-image col-md-4 col-xs-12">
+          <img src="{{news.urlToImage}}" class="img-thumbnail rounded float-left " alt="Image">
+        </div>
+        <div class="news-title col-md-8 col-xs-12">{{news.title}}</div>
+      </div>
+    </div>
+  </div>
+  
+
+

@@ -1,0 +1,68 @@
+.ticker-div {
+    display: flex;
+}
+
+.ticker-h1 {
+    font-size: 2.5rem;
+    display: inline-block;
+    font-weight: bold;
+    line-height: normal;
+    margin: 0;
+}
+.bookmark-button {
+    display: inline-block;
+    vertical-align: middle;
+    background:none;
+    border: 0;
+    outline: none;
+    margin: auto 0;
+}
+
+.fa {
+    /* padding-right: 5px; */
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.bookmark-button-icon {
+    vertical-align: middle;
+}
+
+.fa-star {
+    color: yellow;
+}
+.fa-star-o {
+    color: black;
+}
+
+.name-h2 {
+    font-size: 1.5rem;
+    line-height: normal;
+    font-weight: bold;
+    margin: 0;
+}
+.exchange-code {
+    margin: 10px 0;
+}
+
+.current-time {
+    margin: 10px 0;
+}
+
+@media (max-width: 576px) {
+
+    .ticker-h1 {
+        /* font-size: 2em; */
+    }
+    .name-h2 {
+        /* font-size: 1.5em; */
+    }
+
+    .stock-name-div {
+        width: 50%;
+    }
+    .stock-price-div {
+        width: 50%;
+    }
+}

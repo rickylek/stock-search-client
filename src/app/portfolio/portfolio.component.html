@@ -1,0 +1,63 @@
+
+<div class="row mb-4">
+    <div class="col-md-12">
+        <h1 class="watchlist-title">My Portfolio</h1>
+    </div>
+</div>
+
+<div class="container" [style.display]="isLoadFailed() ? 'block' : 'none'">
+    <div class="alert alert-warning text-center" role="alert">
+        Currently you don't have any stock.
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12" *ngFor="let buyMessage of buyStocks">
+        <div class="stock-card rounded border">
+            <mat-card class="example-card">
+                <mat-card-header class="">
+                    <div class="card-header bg-light">
+                        <mat-card-title class="card-title">{{buyMessage.ticker}}</mat-card-title>
+                        <mat-card-subtitle class="card-subtitle text-secondary">{{buyMessage.name}}</mat-card-subtitle>
+                    </div>
+                </mat-card-header>
+                <mat-card-content>
+                  <div class="row border card-content pl-2 pr-2">
+                      <div class="col-xs-12 col-md-6 d-flex justify-content-between p-0">
+                          <ul class="left-ul">
+                              <li>Quantity:</li>
+                              <li>Avg Cost / Share:</li>
+                              <li>Total Cost:</li>
+                          </ul>
+
+                          <ul class="right-ul">
+                            <li>{{buyMessage.quantity | number: '1.2-2'}}</li>
+                            <li>{{buyMessage.costPrice | number: '1.2-2'}}</li>
+                            <li>{{buyMessage.value | number: '1.2-2'}}</li>
+                        </ul>
+                      </div>
+                      <div class="col-xs-12 col-md-6 d-flex justify-content-between p-0">
+                          <ul class="left-ul">
+                              <li>Change:</li>
+                              <li>Current Price:</li>
+                              <li>Market Value:</li>
+                          </ul>
+
+                        <ul class="right-ul" [style.color]="buyMessage.changeColor">
+                          <li><i class="fa {{buyMessage.changeIcon}}" aria-hidden="true"></i> {{buyMessage.change | number: '1.2-2'}}</li>
+                          <li>{{buyMessage.last | number: '1.2-2'}}</li>
+                          <li>{{buyMessage.currentValue | number: '1.2-2'}}</li>
+                      </ul>
+                    </div>
+                  </div>
+                </mat-card-content>
+                <mat-card-actions>
+                    <div class="bg-light card-actions border">
+                        <app-buy-stock-modal class="buy-button" [stockPrice]="buyMessage.stockPrice" (buyStocksChange)="buyStocksChange($event)"></app-buy-stock-modal>
+                        <app-sell-stock-modal class="" [stockPrice]="buyMessage.stockPrice" (buyStocksChange)="buyStocksChange($event)"></app-sell-stock-modal>
+                    </div>
+                </mat-card-actions>
+              </mat-card>
+        </div>
+    </div>
+</div>

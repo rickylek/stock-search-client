@@ -1,0 +1,50 @@
+.watchlist-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: normal;
+    margin: 20px 0 10px 40px;
+}
+
+.stock-card {
+    /* width: 100%; */
+    padding: 20px;
+    margin: 10px 40px;
+
+}
+
+.ticker-h1 {
+    font-size: 2rem;
+    display: inline-block;
+    font-weight: bold;
+    line-height: normal;
+    margin: 0;
+}
+
+.name-h2 {
+    font-size: 1.5rem;
+    line-height: normal;
+    font-weight: bold;
+    margin: 0;
+}
+
+.close-button {
+    float: right;
+    width: 15px;
+    height: 15px;
+    font-size: 15px;
+}
+
+@media (max-width: 576px) {
+    .watchlist-title {
+        margin: 10px 0 10px 10px;
+    }
+    .stock-card {
+        margin: 10px;
+    }
+    .stock-name-div {
+        width: 50%;
+    }
+    .stock-price-div {
+        width: 50%;
+    }
+}

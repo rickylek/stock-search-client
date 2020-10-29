@@ -1,0 +1,20 @@
+<h1 class="text-center stock-h1">STOCK SEARCH</h1>
+
+<form class="search-form m-auto">
+    <input
+      class="m-auto search-input"
+      type="text"
+      placeholder="Enter stock name"
+      matInput
+      [formControl]="myControl"
+      [matAutocomplete]="auto"
+      />
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option *ngFor="let stock of stocks | async" [value]="stock.ticker">
+        {{stock.ticker}}|{{stock.name}}
+      </mat-option>
+    </mat-autocomplete>
+  <button class="search-button" mat-fab color="warn" (click)="getStockDetails()">
+    <mat-icon class="search-button-icon">search</mat-icon>
+  </button>
+</form>

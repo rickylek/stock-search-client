@@ -1,0 +1,23 @@
+
+.price-right {
+    text-align: right;
+}
+.last-price {
+    font-size: 2.5rem;
+    display: inline-block;
+    font-weight: bold;
+    line-height: normal;
+    margin: 0;
+}
+.change {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: normal;
+    margin: 0;
+}
+.change-icon {
+    vertical-align: middle;
+    font-size: xx-large;
+    height: 29px;
+    width: 29px;
+}

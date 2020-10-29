@@ -1,0 +1,19 @@
+.stock-price-div {
+    padding: 40px;
+    text-align: center;
+}
+
+.stock-price-ul {
+    list-style: none;
+    padding: 0;
+}
+
+@media (max-width: 576px) {
+    .stock-price-div {
+        padding: 30px 10px 10px 10px;
+    }
+
+    .stock-price-col {
+        width: fit-content;
+    }
+}

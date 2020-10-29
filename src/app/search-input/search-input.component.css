@@ -1,0 +1,29 @@
+.stock-h1 {
+    font-size: 72px;
+    font-weight: bolder;
+    line-height: normal;
+    margin-top: 90px;
+    margin-bottom: 30px;
+}
+.search-form {
+	width:300px;
+	border-radius:42px;
+	border:2px solid blueviolet;
+    padding: 5px 15px;
+}
+.search-input {
+    width: 230px;
+    border: 0;
+    line-height: 32px;
+    outline: none;
+}
+
+.search-button {
+    vertical-align: middle;
+    background:none;
+    border: 0;
+    outline: none;
+}
+.search-button-icon {
+    vertical-align: middle;
+}

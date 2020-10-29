@@ -1,0 +1,36 @@
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h1 class="watchlist-title">My Watchlist</h1>
+    </div>
+</div>
+
+<div class="container" [style.display]="isLoadFailed() ? 'block' : 'none'">
+    <div class="alert alert-warning text-center" role="alert">
+        Currently, you don't have any stock in your watchlist.
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12" *ngFor="let stock of bookmarkedStocks">
+        <div class="stock-card border rounded bg-light">
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-icon class="close-button pull-right" (click)=unBookmarkStock(stock.ticker)>close</mat-icon>
+                </div>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col-md-6 stock-name-div">
+                    <div class="ml-auto">
+                        <div class="ticker-h1">{{stock.ticker}}</div>
+                        <div class="name-h2 text-secondary">{{stock.name}}</div>
+                    </div>
+                </div>
+                <div class="col-md-6 stock-price-div">
+                    <app-change-price [stockPrice]="stock.stockPrice"></app-change-price>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
