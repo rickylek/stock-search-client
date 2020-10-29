@@ -25,7 +25,7 @@ import {
   providedIn: 'root'
 })
 export class SearchStockService {
-  HOST = 'http://localhost:3000/';
+  HOST = process.env.HOST || 'http://localhost:3000/';
   searchUrl = this.HOST + 'api/search/stock/';
   detailsUrl = this.HOST + 'api/stock/';
   priceUrl = this.HOST + 'api/stock/';
