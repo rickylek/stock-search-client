@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port 8080",
+    "start": "ng build & ng serve --port 8080",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -11,6 +11,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/build-angular": "~0.1001.7",
     "@angular/cli": "~10.1.7",
     "@angular/animations": "~10.1.6",
     "@angular/cdk": "^10.2.5",
@@ -32,8 +33,11 @@
     "material-design-icons": "^3.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.10.2",
+    "zone.js": "~0.10.2"
+  },
+  "devDependencies": {
     "@angular-devkit/build-angular": "~0.1001.7",
+    "@angular/cli": "~10.1.7",
     "@angular/compiler-cli": "~10.1.6",
     "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
